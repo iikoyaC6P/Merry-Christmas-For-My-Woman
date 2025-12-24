@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>For You</title>
+  <title>For My Woman</title>
   <style>
     body {
       background-color: #f6f2ef;
@@ -13,40 +13,102 @@
       height: 100vh;
       margin: 0;
     }
-    .box {
+
+    .container {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 500px;
       text-align: center;
-      max-width: 400px;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 10px;
     }
-    button {
-      font-size: 1.2em;
-      padding: 10px 20px;
+
+    h2 {
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .gift {
+      font-size: 80px;
       cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .gift:hover {
+      transform: scale(1.1);
+    }
+
+    .message {
+      text-align: left;
+      white-space: pre-wrap;
+      line-height: 1.5;
+      display: none;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <div class="box" id="giftBox">
-    <p>I made something for you.</p>
-    <button onclick="openGift()">🎁 Click the gift</button>
-  </div>
 
-  <div class="box" id="message" style="display:none;">
-    <p>
-      I don’t have money right now, but I wanted to give you something made just for you.<br><br>
-      You make me feel safe, happy, and understood.<br><br>
-      I’m really grateful you’re in my life.
-    </p>
-  </div>
+<div class="container">
+  <h2 id="title">only my woman is able to open this gift</h2>
+  <div id="gift" class="gift" onclick="nextStage()">🎁</div>
+  <div id="message" class="message">
+Lea, my woman, my love, my baby, my cutie, my favourite person, my princess, my everything, my world.
 
-  <script>
-    function openGift() {
-      document.getElementById("giftBox").style.display = "none";
-      document.getElementById("message").style.display = "block";
+words really cant describe my love for you, I hope you realise that i'll do anything for you, anything for my baby and my lovely woman to be happy, to hear your cute chuckles and laugh, and see you smile, you bring the best out of me, everyday i wake up, knowing i have a cute loving caring gf who would do anything for me, who would die for me, you are truly my amazing woman, this is completely a freestyle and coming from the bottom of my heart, no filter, just the very raw feelings for you my dear.
+
+Thank you for making me feel heard,  
+Thank you for making me feel seen,  
+Thank you for making me feel understood,  
+Thank you for making me feel loved,  
+Thank you for making me feel cared for,  
+
+I see the effort you do to make me happy, to make me feel all of the things i mentioned above, and ur sooo MY woman for that <3
+
+And i really hope that i make u feel the same, hmmm, i'll tell you about a promise i gave myself,
+
+i promised myself i will never yell, scream, and dare to lay my hands on you my baby, or hurt ur little precious heart, not even once.  
+i promised myself i'll do anything to make you happy, i'd spend my last penny on you with a very wide smile, u deserve everything i have or will have in the future, and i'll work very hard for our future together, for the both of us to be in a cute cabinet with cute animals, both of us saving animals.  
+
+thats a promise i made with myself.
+
+I see the effort you do to make me happy, to make me feel all of the things i mentioned above, and ur sooo MY woman for that, ur MYYYYYYY WOMAN.
+
+And the future holds nothing but the best for the both of us, i wanna celebrate infinite christmases with you, i wanna celebrate with u everyday ur alive and drowning in my arms.
+
+the amount of comfort u give me, and emotional safety, is truly beautiful, ur my home, ur where i lay low, and let my guard down.
+
+I love you.
+
+Your man,  
+Ahmed
+  </div>
+</div>
+
+<script>
+  let stage = 0;
+
+  function nextStage() {
+    const title = document.getElementById("title");
+    const gift = document.getElementById("gift");
+    const message = document.getElementById("message");
+
+    stage++;
+
+    if (stage === 1) {
+      title.innerText = "what’s wrong?, the gift seems to be not opening? hmmm must be a coding problem";
+      gift.innerText = "🎁";
+    } 
+    else if (stage === 2) {
+      title.innerText = "now enough jokes, trust me now it’ll open when u click it, because you are my woman <3";
+      gift.innerText = "🎁";
+    } 
+    else if (stage === 3) {
+      gift.style.display = "none";
+      title.innerText = "💙";
+      message.style.display = "block";
     }
-  </script>
+  }
+</script>
+
 </body>
 </html>
-
