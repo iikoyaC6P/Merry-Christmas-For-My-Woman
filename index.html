@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You</title>
+  <style>
+    body {
+      background-color: #f6f2ef;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .box {
+      text-align: center;
+      max-width: 400px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+    }
+    button {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" id="giftBox">
+    <p>I made something for you.</p>
+    <button onclick="openGift()">🎁 Click the gift</button>
+  </div>
+
+  <div class="box" id="message" style="display:none;">
+    <p>
+      I don’t have money right now, but I wanted to give you something made just for you.<br><br>
+      You make me feel safe, happy, and understood.<br><br>
+      I’m really grateful you’re in my life.
+    </p>
+  </div>
+
+  <script>
+    function openGift() {
+      document.getElementById("giftBox").style.display = "none";
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+</body>
+</html>
 
