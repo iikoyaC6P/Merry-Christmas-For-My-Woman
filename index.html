@@ -50,12 +50,12 @@
 
 <div class="container">
   <h2 id="title">only my woman is able to open this gift</h2>
-  <div id="gift" class="gift" onclick="nextStage()">🎁</div>
+  <div id="gift" class="gift">🎁</div>
 
   <div id="message" class="message">
 Lea, my woman, my love, my baby, my cutie, my favourite person, my princess, my everything, my world.
 
-words really cant describe my love for you, I hope you realise that i'll do anything for you, anything for my baby and my lovely woman to be happy, to hear your cute chuckles and laugh, and see you smile, you bring the best out of me, everyday i wake up, knowing i have a cute loving caring gf who would do anything for me, who would die for me, you are truly my amazing woman, this is completely a freestyle and coming from the bottom of my heart, no filter, just the very raw feelings for you my dear.
+words really cant describe my love for you, I hope you realise that i'll do anything for you, anything for my baby and my lovely woman to be happy, to hear your cute chuckles and laugh, and see you smile, you bring the best out of me, everyday i wake up, knowing i have a cute loving caring gf who would do anything for me, who would die for me, you are truly my amazing woman, this is completely a freestyle and coming from the bottom of my heart, no filter, just the very raw feelings I HAVE for you my dear.
 
 Thank you for making me feel heard,  
 Thank you for making me feel seen,  
@@ -88,18 +88,20 @@ Ahmed
 <script>
   let stage = 0;
 
-  function nextStage() {
-    const title = document.getElementById("title");
-    const gift = document.getElementById("gift");
-    const message = document.getElementById("message");
+  const title = document.getElementById("title");
+  const gift = document.getElementById("gift");
+  const message = document.getElementById("message");
 
+  gift.addEventListener("click", () => {
     stage++;
 
     if (stage === 1) {
       title.innerText = "what’s wrong?, the gift seems to be not opening? hmmm must be a coding problem";
+      gift.innerText = "🎁";
     } 
     else if (stage === 2) {
       title.innerText = "now enough jokes, trust me now it’ll open when u click it, because you are my woman <3";
+      gift.innerText = "🎁";
     } 
     else if (stage === 3) {
       gift.style.display = "none";
@@ -107,17 +109,12 @@ Ahmed
 
       let text = message.innerText;
 
-      text = text.replace(
-        "the very raw feelings for you",
-        "the very raw feelings I HAVE for you"
-      );
-
       text += "\n\nI'm insanely in love with you and pretty much insanely obsessed with you Lea.";
 
       message.innerText = text;
       message.style.display = "block";
     }
-  }
+  });
 </script>
 
 </body>
